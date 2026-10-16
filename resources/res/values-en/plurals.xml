@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="start_program_now">
+        <item quantity="one">Since %1$d minute</item>
+        <item quantity="other">Since %1$d minutes</item>
+    </plurals>
+</resources>

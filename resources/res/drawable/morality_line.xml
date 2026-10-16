@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:shape="rectangle">
+    <solid android:color="@drawable/_morality_line__0_res_0x7f080005"/>
+    <size
+        android:height="4dp"
+        android:width="20dp"/>
+</shape>

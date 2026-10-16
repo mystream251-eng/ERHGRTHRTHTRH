@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="morality_settings_message_2">
+        <item quantity="one">Protección desactivada. Todo el contenido está disponible sin un código de control de padres.</item>
+        <item quantity="other">Protección desactivada. Todo el contenido está disponible sin un código de control de padres.</item>
+    </plurals>
+    <plurals name="start_program_now">
+        <item quantity="one">Desde %1$d minuto</item>
+        <item quantity="other">Desde %1$d minutos</item>
+    </plurals>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:interpolator="@android:interpolator/fast_out_linear_in"
+        android:duration="@integer/program_guide_anim_duration"
+        android:valueTo="-32dp"
+        android:propertyName="translationX"/>
+</set>

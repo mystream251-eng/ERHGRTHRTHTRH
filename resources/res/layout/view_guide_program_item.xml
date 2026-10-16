@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/guide_current_background"
+        android:layout_width="wrap_content"
+        android:layout_height="162dp">
+        <LinearLayout
+            android:gravity="top"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:textSize="28sp"
+                android:textColor="@color/white100"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="BUSCANDO A DORY"
+                android:fontFamily="@font/lato"/>
+            <TextView
+                android:textSize="22sp"
+                android:textColor="@color/white100"
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Pellìcula | Infantiles"
+                android:fontFamily="@font/lato"/>
+            <TextView
+                android:textSize="24sp"
+                android:textColor="@color/white100"
+                android:id="@+id/timeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20:00 21:30"
+                android:fontFamily="@font/lato"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

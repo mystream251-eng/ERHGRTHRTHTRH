@@ -1,0 +1,25 @@
+package com.google.android.gms.tasks;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-tasks@@17.1.0 */
+/* JADX INFO: loaded from: classes2.dex */
+final class zza extends CancellationToken {
+    private final zzu<Void> zza = new zzu<>();
+
+    zza() {
+    }
+
+    @Override // com.google.android.gms.tasks.CancellationToken
+    public final boolean isCancellationRequested() {
+        return this.zza.isComplete();
+    }
+
+    @Override // com.google.android.gms.tasks.CancellationToken
+    public final CancellationToken onCanceledRequested(OnTokenCanceledListener onTokenCanceledListener) {
+        this.zza.addOnSuccessListener(new zzb(this, onTokenCanceledListener));
+        return this;
+    }
+
+    public final void zza() {
+        this.zza.zzb((Void) null);
+    }
+}

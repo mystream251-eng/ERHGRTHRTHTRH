@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/program_guide_table_header_column_item"/>
+    <com.dotscreen.portal.ui.screens.guide.ProgramRow
+        android:id="@+id/row"
+        android:paddingLeft="25dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/program_guide_table_item_row_height"/>
+</LinearLayout>

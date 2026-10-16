@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:label="@string/global_search_epg_title"
+    android:icon="@android:drawable/sym_def_app_icon"
+    android:searchSuggestAuthority="@string/global_search_epg_authority"
+    android:searchSuggestPath="search"
+    android:searchSuggestSelection=" ?"
+    android:searchSuggestThreshold="0"
+    android:includeInGlobalSearch="true"
+    android:queryAfterZeroResults="true"
+    android:searchSettingsDescription="@string/global_search_epg_title"/>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="20sp"
+    android:textColor="@color/dialog_button_text_color"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/button_root"
+    android:background="@drawable/dialog_btn_selector"
+    android:focusable="true"
+    android:layout_width="@dimen/right_popup_width"
+    android:layout_height="50dp"
+    android:fontFamily="@font/lato"
+    android:paddingStart="65dp"
+    android:paddingEnd="20dp"/>

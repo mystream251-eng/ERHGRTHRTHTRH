@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="categories_array">
+        <item>NONE</item>
+        <item>Movie</item>
+        <item>TV Movie</item>
+        <item>TV Show</item>
+        <item>TV Show</item>
+        <item>Documentary</item>
+        <item>Théâtre</item>
+        <item>Opera</item>
+        <item>Ballet</item>
+        <item>Variety</item>
+        <item>Magazine</item>
+        <item>Youth</item>
+        <item>Game</item>
+        <item>Music</item>
+        <item>Entertainment</item>
+        <item>Short</item>
+        <item>Cartoon</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Sport</item>
+        <item>News</item>
+        <item>Information</item>
+        <item>Debate</item>
+        <item>Dance</item>
+        <item>Show</item>
+        <item>Gala</item>
+        <item>Report</item>
+        <item>End of broadcasts</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Religious</item>
+        <item>Concert</item>
+        <item>Clips</item>
+        <item>Weather</item>
+        <item>Making-of</item>
+        <item>Ceremony</item>
+        <item>Talk show</item>
+        <item>Reality TV</item>
+        <item>Sort</item>
+        <item>Documentary</item>
+    </array>
+    <array name="categories_to_genre_array">
+        <item />
+        <item>MOVIES</item>
+        <item>MOVIES</item>
+        <item>ENTERTAINMENT</item>
+        <item>ENTERTAINMENT</item>
+        <item>EDUCATION</item>
+        <item>ARTS</item>
+        <item>ARTS</item>
+        <item>ARTS</item>
+        <item>ENTERTAINMENT</item>
+        <item>EDUCATION</item>
+        <item>FAMILY_KIDS</item>
+        <item>GAMING</item>
+        <item>MUSIC</item>
+        <item>COMEDY</item>
+        <item />
+        <item>FAMILY_KIDS</item>
+        <item />
+        <item />
+        <item>SPORTS</item>
+        <item>NEWS</item>
+        <item>NEWS</item>
+        <item>NEWS</item>
+        <item>ARTS</item>
+        <item>COMEDY</item>
+        <item>ARTS</item>
+        <item>EDUCATION</item>
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item>MUSIC</item>
+        <item>MUSIC</item>
+        <item>NEWS</item>
+        <item />
+        <item>ENTERTAINMENT</item>
+        <item>ENTERTAINMENT</item>
+        <item>ENTERTAINMENT</item>
+        <item />
+        <item>EDUCATION</item>
+    </array>
+    <array name="details_fake_audio">
+        <item>English</item>
+        <item>Svenska</item>
+        <item>Español</item>
+        <item>Français</item>
+    </array>
+    <array name="details_fake_subtitles">
+        <item>English</item>
+        <item>Svenska</item>
+        <item>Español</item>
+        <item>Français</item>
+    </array>
+    <array name="genres_array">
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Karaté</item>
+        <item>Erotique</item>
+        <item>Cirque</item>
+        <item>Rock</item>
+        <item>Classique</item>
+        <item>Jazz</item>
+        <item>Animation</item>
+        <item>Pornographique</item>
+        <item>Action</item>
+        <item>NONE</item>
+        <item>Biographique</item>
+        <item>Burlesque</item>
+        <item>Cape et d\'épée</item>
+        <item>Catastrophe</item>
+        <item>Comédie</item>
+        <item>Comédie d\'action</item>
+        <item>Comédie d\'aventure</item>
+        <item>Comédie dramatique</item>
+        <item>Comédie fantastique</item>
+        <item>Comédie musicale</item>
+        <item>Comédie policière</item>
+        <item>Comique</item>
+        <item>Dessin animé</item>
+        <item>Dramatique</item>
+        <item>Drame</item>
+        <item>Drame psychologique</item>
+        <item>Epouvante</item>
+        <item>Espionnage</item>
+        <item>Fantastique</item>
+        <item>Guerre</item>
+        <item>Historique</item>
+        <item>Horreur</item>
+        <item>Musical</item>
+        <item>Policier</item>
+        <item>Psychologique</item>
+        <item>Science-fiction</item>
+        <item>Suspense</item>
+        <item>Thriller</item>
+        <item>Western</item>
+        <item>Animalier</item>
+        <item>Péplum</item>
+        <item>Evocation historique</item>
+        <item>Documentaire</item>
+        <item>Essai</item>
+        <item>NONE</item>
+        <item>Chronique</item>
+        <item>Conte</item>
+        <item>Comédie satirique</item>
+        <item>NONE</item>
+        <item>Drame historique</item>
+        <item>Film de montage</item>
+        <item>Biographie</item>
+        <item>Comédie de moeurs</item>
+        <item>Comédie macabre</item>
+        <item>Etude de mœurs</item>
+        <item>Drame social</item>
+        <item>Comédie historique</item>
+        <item>Comédie romantique</item>
+        <item>NONE</item>
+        <item>Conte fantastique</item>
+        <item>Drame allégorique</item>
+        <item>NONE</item>
+        <item>Comédie onirique</item>
+        <item>Court métrage</item>
+        <item>Peinture sociale</item>
+        <item>Politique</item>
+        <item>Drame policier</item>
+        <item>Comédie sentimentale</item>
+        <item>Drame fantastique</item>
+        <item>Mélodrame</item>
+        <item>Comédie noire</item>
+        <item>Drame sentimental</item>
+        <item>Reconstitution historique</item>
+        <item>Conte érotique</item>
+        <item>Drame romantique</item>
+        <item>Comédie sociale</item>
+        <item>Opéra</item>
+        <item>Sketches</item>
+        <item>Documentaire Politique</item>
+        <item>Documentaire fiction</item>
+        <item>Fable</item>
+        <item>Drame politique</item>
+        <item>Drame satirique</item>
+        <item>Comédie Burlesque</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Anticipation</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Découverte</item>
+        <item>Science et technique</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Art</item>
+        <item>Aventure</item>
+        <item>Cinéma</item>
+        <item>Civilisation</item>
+        <item>Littéraire</item>
+        <item>Nature</item>
+        <item>Religion</item>
+        <item>Santé</item>
+        <item>Société</item>
+        <item>Sport</item>
+        <item>Information</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Culturel</item>
+        <item>Reportage</item>
+        <item>NONE</item>
+        <item>Economique</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Mode</item>
+        <item>Informatique</item>
+        <item>NONE</item>
+        <item>Scientifique</item>
+        <item>Service</item>
+        <item>NONE</item>
+        <item>Sportif</item>
+        <item>Téléachat</item>
+        <item>Mer</item>
+        <item>Culinaire</item>
+        <item>Actualité</item>
+        <item>Vie pratique</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Médical</item>
+        <item>NONE</item>
+        <item>Environnement</item>
+        <item>NONE</item>
+        <item>Automobile</item>
+        <item>Langue</item>
+        <item>Philosophique</item>
+        <item>Jardinage</item>
+        <item>Débat</item>
+        <item>Religieux</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Jeu</item>
+        <item>Magazine</item>
+        <item>Blues</item>
+        <item>NONE</item>
+        <item>NONE</item>
+        <item>Pop/Rock</item>
+        <item>Rap</item>
+        <item>Techno</item>
+        <item>Clips</item>
+        <item>Variétés</item>
+        <item>NONE</item>
+        <item>Opérette</item>
+        <item>Musique du monde</item>
+        <item>Concert</item>
+        <item>Football</item>
+        <item>Tennis</item>
+        <item>NONE</item>
+        <item>Aérobic</item>
+        <item>Alpinisme</item>
+        <item>Aviron</item>
+        <item>Arts martiaux</item>
+        <item>Athlétisme</item>
+        <item>Badminton</item>
+        <item>Base-ball</item>
+        <item>Biathlon</item>
+        <item>Billard</item>
+        <item>Bobsleigh</item>
+        <item>Body-building</item>
+        <item>Bowling</item>
+        <item>Boxe</item>
+        <item>Canoé-kayak</item>
+        <item>Catch</item>
+        <item>Cricket</item>
+        <item>Curling</item>
+        <item>Patinage artistique</item>
+        <item>Cyclisme</item>
+        <item>Tennis de table</item>
+        <item>Basket-ball</item>
+        <item>Formule 1</item>
+        <item>Karting</item>
+        <item>Plongeon</item>
+        <item>Plongée sous-marine</item>
+        <item>Voile</item>
+        <item>Surf</item>
+        <item>Funboard</item>
+        <item>Jetski</item>
+        <item>Ski nautique</item>
+        <item>Gymnastique</item>
+        <item>Haltérophilie</item>
+        <item>Danse</item>
+        <item>Cross</item>
+        <item>Escalade</item>
+        <item>Combiné nordique</item>
+        <item>Patinage de vitesse</item>
+        <item>Hockey sur glace</item>
+        <item>Ski alpin</item>
+        <item>Ski artistique</item>
+        <item>Ski de fond</item>
+        <item>Saut à ski</item>
+        <item>Snowboard</item>
+        <item>Aviation</item>
+        <item>Parachutisme</item>
+        <item>Parapente</item>
+        <item>Delta</item>
+        <item>Planeur</item>
+        <item>Cerf-volant</item>
+        <item>Golf</item>
+        <item>Equitation</item>
+        <item>Polo</item>
+        <item>Corrida</item>
+        <item>VTT</item>
+        <item>Pétanque</item>
+        <item>Football américain</item>
+        <item>Rugby</item>
+        <item>Handball</item>
+        <item>Volley-ball</item>
+        <item>Boxe française</item>
+        <item>Tir</item>
+        <item>Tir à l\'arc</item>
+        <item>Triathlon</item>
+        <item>Trial</item>
+        <item>Stock-car</item>
+        <item>Sport de vitesse</item>
+        <item>Pentathlon</item>
+        <item>Rallye</item>
+        <item>Natation</item>
+        <item>Escrime</item>
+        <item>Marathon</item>
+        <item>Duathlon</item>
+        <item>GRS</item>
+        <item>Trampoline</item>
+        <item>Fitness</item>
+        <item>Cart (Indy)</item>
+        <item>Voitures de tourisme</item>
+        <item>Course de camions</item>
+        <item>Monster Truck</item>
+        <item>Tractor Pulling</item>
+        <item>Side-car</item>
+        <item>Beach Volley</item>
+        <item>Hockey sur gazon</item>
+        <item>Cesta Punta</item>
+        <item>Fléchettes</item>
+        <item>Kick Boxing</item>
+        <item>NONE</item>
+        <item>Judo</item>
+        <item>Lutte</item>
+        <item>Sumo</item>
+        <item>Cyclo-cross</item>
+        <item>BMX</item>
+        <item>Skateboard</item>
+        <item>Roller Skate</item>
+        <item>Sandboard</item>
+        <item>Voltige aérienne</item>
+        <item>Ski de vitesse</item>
+        <item>Luge</item>
+        <item>Natation synchronisée</item>
+        <item>Formule 3000</item>
+        <item>Handysport</item>
+        <item>Dragster</item>
+        <item>Squash</item>
+        <item>Vol à voile</item>
+        <item>Pelote Basque</item>
+        <item>Moto</item>
+        <item>Planche à voile</item>
+        <item>Water polo</item>
+        <item>Inshore</item>
+        <item>Pêche</item>
+        <item>Snooker</item>
+        <item>Courts métrages</item>
+        <item>NONE</item>
+        <item>Beach Soccer</item>
+        <item>Skeleton</item>
+        <item>Ski acrobatique</item>
+        <item>Série</item>
+        <item>Kung-Fu</item>
+        <item>Soft-ball</item>
+        <item>Football australien</item>
+        <item>Football en salle</item>
+        <item>Sport de force</item>
+        <item>Babyfoot</item>
+        <item>Poker</item>
+        <item>Echecs</item>
+        <item>Rodéo</item>
+        <item>Yoga</item>
+        <item>Bandy</item>
+        <item>Bras de fer</item>
+        <item>Architecture</item>
+        <item>Peinture</item>
+        <item>Sculpture</item>
+        <item>Photographie</item>
+        <item>Jeunesse</item>
+        <item>Motocross</item>
+        <item>Cheerleading</item>
+        <item>Hockey en salle</item>
+        <item>Bûcheronnage</item>
+        <item>Football américain en salle</item>
+        <item>Boxe thaïlandaise</item>
+        <item>Rugby à XIII</item>
+        <item>Hippisme</item>
+        <item>Chiens de traîneaux</item>
+        <item>Stand Up Paddle</item>
+        <item>Lacrosse</item>
+        <item>Relais</item>
+        <item>Roller Ski</item>
+        <item>Unihockey</item>
+        <item>Saut de falaise</item>
+        <item>Sepak takraw</item>
+        <item>Course de tracteur</item>
+        <item>Motoneige</item>
+        <item>Sports extrêmes</item>
+        <item>Free Running</item>
+        <item>Country</item>
+        <item>Musique folklorique</item>
+        <item>Sports mécaniques</item>
+        <item>Education</item>
+        <item>Course camarguaise</item>
+        <item>Motonautisme</item>
+        <item>Cérémonie religieuse</item>
+        <item>Magazine</item>
+        <item>Corde à sauter</item>
+        <item>Déclamation baroque</item>
+        <item>Dramma giocosco</item>
+        <item>Grand opéra</item>
+        <item>Opéra anglais</item>
+        <item>Opéra ballet</item>
+        <item>Opéra bouffe</item>
+        <item>Opéra comique</item>
+        <item>Opéra semiseria</item>
+        <item>Opéra seria</item>
+        <item>Opérette</item>
+        <item>Pastorale héroïque</item>
+        <item>Semi-opéra</item>
+        <item>Singspiel</item>
+        <item>Tragédie lyrique</item>
+        <item>Zarzuela</item>
+        <item>One-man-show</item>
+        <item>One-woman-show</item>
+        <item>Télénovela</item>
+        <item>Melodramma</item>
+        <item>R&amp;amp;B</item>
+        <item>People</item>
+        <item>Reggae</item>
+        <item>Oratorio</item>
+    </array>
+    <array name="parental_rating_array">
+        <item>NR</item>
+        <item>AA</item>
+        <item>A</item>
+        <item>B</item>
+        <item>B15</item>
+        <item>C</item>
+        <item>D</item>
+    </array>
+    <array name="parental_rating_array_to_display">
+        <item>AA</item>
+        <item>A</item>
+        <item>B</item>
+        <item>B15</item>
+        <item>C</item>
+        <item>D</item>
+    </array>
+</resources>

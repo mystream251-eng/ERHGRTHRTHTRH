@@ -1,0 +1,15 @@
+package com.google.android.gms.internal;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class zzzl extends Exception {
+    private final int zza;
+
+    public zzzl(String str, int i) {
+        super(str);
+        this.zza = i;
+    }
+
+    public final int zza() {
+        return this.zza;
+    }
+}

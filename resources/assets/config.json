@@ -1,0 +1,173 @@
+{
+	"design": {
+		"standard": {
+			"iconApp": "icon.png",
+			"background": {
+				"color": "#000003",
+				"image": "https://www.xviewplus.com.mx/config/img/bg_tv.jpg"
+			},
+			"logo": "https://www.xviewplus.com.mx/config/img/logo_tv.png",
+			"textColor": "#FFFFFF",
+			"item": {
+				"default": {
+					"background": {
+						"color": "#0a2943"
+					},
+					"textColor": "#FFFFFF"
+				},
+				"selected": {
+					"outline": {
+						"color": "#259CD8"
+					},
+					"background": {},
+					"textColor": "#FFFFFF"
+				}
+			}
+		},
+		"custom": {
+			"navigation": {},
+			"home": {},
+			"grid": {},
+			"catchup": {},
+			"epg": {
+				"background": {
+					"image": "https://www.xviewplus.com.mx/config/img/bg_tv.jpg"
+				},
+				"tab": {
+					"default": {
+						"textColor": "#80FFFFFF"
+					},
+					"selected": {
+						"textColor": "#FFFFFF"
+					}
+				}
+			},
+			"vod": {},
+			"setting": {},
+			"player": {}
+		}
+	},
+	"swimlanes": [
+		{
+			"type": "last_channels"
+		},
+		{
+			"type": "recommendations"
+		},
+		{
+			"type": "my_content"
+		},
+		{
+			"type": "featured_apps",
+			"content": [
+				{
+					"name": "Netflix",
+					"package": "com.netflix.ninja",
+					"banner": "https://www.xviewplus.com.mx/config/img/netflix.png"
+				},
+				{
+					"name": "Prime Video",
+					"package": "com.amazon.amazonvideo.livingroom",
+					"banner": "https://www.xviewplus.com.mx/config/img/prime_video.png"
+				},
+				{
+					"name": "Youtube",
+					"package": "com.google.android.youtube.tv",
+					"banner": "https://www.xviewplus.com.mx/config/img/youtube.png"
+				},
+				{
+					"name": "Disney+",
+					"package": "com.disney.disneyplus",
+					"banner": "https://www.xviewplus.com.mx/config/img/disneyplus_2502.jpg"
+				},
+				{
+					"name": "HBO MAX",
+					"package": "com.hbo.hbonow",
+					"banner": "https://www.xviewplus.com.mx/config/img/HBOMAX_01.jpg"
+				},
+
+				{
+					"name": "StarPlus",
+					"package": "com.disney.starplus",
+					"banner": "https://www.xviewplus.com.mx/config/img/StarPlus_2.png"
+				},
+				{
+					"name": "NFL GP",
+					"package": "com.deltatre.nfl.gamepass",
+					"banner": "https://www.xviewplus.com.mx/config/img/nfl.jpg"
+				},
+				{
+					"name": "NBA",
+					"package": "com.nbaimd.gametime.nba2011",
+					"banner": "https://www.xviewplus.com.mx/config/img/NBA_2.png"
+				},
+				{
+					"name": "MLB",
+					"package": "com.bamnetworks.mobile.android.gameday.atbat",
+					"banner": "https://www.xviewplus.com.mx/config/img/mlb.jpg"
+				},
+				{
+					"name": "Videorola",
+					"package": "com.videorola.app",
+					"banner": "https://www.xviewplus.com.mx/config/img/vr1.jpg"
+				}
+			]
+		}
+	],
+	"analytics": {
+		"smartLib": {
+			"analyticsAddress": "https://bka100-vip-gdl.quieroxview.com.mx",
+			"nanoCDNHost": "127.0.0.1,discover",
+			"broadpeakDomainNames": "bkm100-fo-vip.quieroxview.com.mx"
+		},
+		"dca": {
+			"enabled": true,
+			"url": "https://www.xviewplus.com.mx/config/dca_config_2_3.json"
+		},
+		"compass": {
+			"contentEndEventPercent": 95,
+			"zapEventDelay": 30
+		},
+		"sentry": {
+			"voPlayer": 1,
+			"uiOptimizer": 1,
+			"rightv": 1,
+			"updater": 1
+		}
+	},
+	"updatePinCode": "1234",
+	"avatars": {
+		"path": "https://www.xviewplus.com.mx/config/img/avatars/",
+		"total": 51
+	},
+	"actors": {
+		"path": "/api/tv/v1/0x0/10.9.9.200/Images/actors/"
+	},
+	"provider": {
+		"path": "http://172.31.170.56:3128/portal/attachments/cp_logos/",
+		"content": [
+			{
+				"id": "HBO PREMIUM",
+				"image": "hbo.png"
+			},
+			{
+				"id": "HBO",
+				"image": "hbo.png"
+			},
+			{
+				"id": "NETFLIX",
+				"image": "netflix.png"
+			},
+			{
+				"id": "PRIME VIDEO",
+				"image": "primevideo.png"
+			}
+		]
+	},
+	"catalogs": {
+		"vod": "VOD01",
+		"catchup": "Catch-up1",
+		"homeReco": "Launcher1"
+	},
+	"freeMemory": "false"
+}

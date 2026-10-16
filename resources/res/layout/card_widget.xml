@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/home_card_width"
+    android:layout_height="@dimen/home_card_height">
+    <RelativeLayout
+        android:id="@+id/widget_layout"
+        android:background="@drawable/item_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/item_selector">
+        <ImageView
+            android:id="@+id/widget_img"
+            android:visibility="visible"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerInside"
+            android:layout_centerHorizontal="true"
+            android:tintMode="src_in"
+            app:farDesignTint="standard.item.default.textColor"/>
+        <TextView
+            android:textSize="14sp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:paddingTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@+id/widget_img"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/lato_bold"
+            app:farDesignColor="standard.item.default.textColor"/>
+        <TextView
+            android:textSize="12sp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:id="@+id/second_title"
+            android:padding="3.5dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato"
+            app:farDesignColor="standard.item.default.textColor"/>
+    </RelativeLayout>
+</FrameLayout>

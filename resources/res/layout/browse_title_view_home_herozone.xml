@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dotscreen.portal.ui.views.HomeHeroZoneView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/browse_title_group"
+    android:clipChildren="false"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/home_herozone_height">
+    <com.dotscreen.portal.ui.views.InLayoutNativeAdBannerView
+        android:tag="@string/DS_HOME_PAGE_IN_LAYOUT_TOP"
+        android:layout_width="@dimen/top_banner_native_ad_width"
+        android:layout_height="@dimen/top_banner_native_ad_height"
+        android:layout_marginLeft="@dimen/top_banner_native_ad_margin_left"
+        android:layout_marginTop="@dimen/top_banner_native_ad_margin_top"
+        android:scaleType="centerInside"/>
+</com.dotscreen.portal.ui.views.HomeHeroZoneView>

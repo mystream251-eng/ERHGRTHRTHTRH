@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="parental_rating_array">
+        <item>NR</item>
+        <item>AA</item>
+        <item>A</item>
+        <item>B</item>
+        <item>B15</item>
+        <item>C</item>
+        <item>D</item>
+    </array>
+    <array name="parental_rating_array_to_display">
+        <item>AA</item>
+        <item>A</item>
+        <item>B</item>
+        <item>B15</item>
+        <item>C</item>
+        <item>D</item>
+    </array>
+</resources>

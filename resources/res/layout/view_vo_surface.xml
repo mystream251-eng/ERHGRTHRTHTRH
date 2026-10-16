@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.viaccessorca.voplayer.VOSurfaceView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:id="@+id/VideoSurface"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.dotscreen.tv.ui.DirectChannelAccessView
+        android:id="@+id/dca_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="230dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</com.viaccessorca.voplayer.VOSurfaceView>

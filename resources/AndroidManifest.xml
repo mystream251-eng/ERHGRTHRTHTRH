@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="com.dotscreen.megacable"
+    android:versionCode="396"
+    android:versionName="0.75.1-padi"
+    android:compileSdkVersion="28"
+    android:compileSdkVersionCodename="9"
+    package="com.dotscreen.megacable.portal"
+    platformBuildVersionCode="28"
+    platformBuildVersionName="9">
+    <uses-sdk
+        android:minSdkVersion="28"
+        android:targetSdkVersion="29"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.READ_TV_LISTINGS"/>
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA"/>
+    <uses-permission android:name="com.android.providers.tv.permission.ACCESS_ALL_EPG_DATA"/>
+    <uses-permission android:name="com.android.providers.tv.permission.ACCESS_WATCHED_PROGRAMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GLOBAL_SEARCH"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGE_UPDATES"/>
+    <uses-permission android:name="android.permission.CAPTURE_TV_INPUT"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.android.setupwizard.permission.SETUP"/>
+    <uses-permission android:name="com.technicolor.android.dtvprovider.permission.READ"/>
+    <uses-permission android:name="com.netflix.ninja.permission.TOKEN"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true"/>
+    <uses-permission android:name="com.technicolor.android.dtvinput"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.dotscreen.portal.PortalApplication"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:banner="@drawable/app_banner"
+        android:extractNativeLibs="false"
+        android:networkSecurityConfig="@xml/network_security_config_mega"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data
+            android:name="io.sentry.auto-init"
+            android:value="false"/>
+        <activity
+            android:theme="@style/AppTheme.Home"
+            android:name="com.dotscreen.portal.ui.screens.home.HomeActivity"
+            android:launchMode="singleTask">
+            <intent-filter android:priority="2">
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details.EPG"
+            android:label="@string/global_search_epg_title"
+            android:name="com.dotscreen.portal.ui.screens.details.EPGDetailsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/epg/details"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_epg"/>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Catchup.Channel"
+            android:name="com.dotscreen.portal.ui.screens.catchup.CatchupDetailActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/catchup/details_channel"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.EPG"
+            android:name="com.dotscreen.portal.ui.screens.epg.EPGActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/epg"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/program"/>
+                <data android:mimeType="vnd.android.cursor.dir/program"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.EPG.Guide"
+            android:name="com.dotscreen.portal.ui.screens.guide.GuideActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/epg/guide"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Settings"
+            android:name="com.dotscreen.portal.ui.screens.setup.SettingsActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/settings"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Profile"
+            android:name="com.dotscreen.portal.ui.screens.profile.ProfileManagementActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/profile"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.utils.ActionBroadcastReceiver.RebootDialogActivity"/>
+        <activity
+            android:theme="@style/AppTheme.Catchup"
+            android:name="com.dotscreen.portal.ui.screens.catchup.CatchupHomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/catchup"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.details.CatchupDetailsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/catchup/details"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:label="@string/global_search_catchup_title"
+            android:name="com.dotscreen.portal.ui.screens.details.CatchupSearchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_catchup"/>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:label="@string/global_search_vod_title"
+            android:name="com.dotscreen.portal.ui.screens.details.VODDetailsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/vod/details"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_vod"/>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.VOD"
+            android:name="com.dotscreen.portal.ui.screens.vod.VODHomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/vod"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Player"
+            android:name="com.dotscreen.portal.ui.screens.player.VODPlaybackActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/player"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Browse"
+            android:name="com.dotscreen.portal.ui.screens.browse.BrowseCollectionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/collection"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Applications"
+            android:name="com.dotscreen.portal.ui.screens.applications.ApplicationsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/applications"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Search"
+            android:name="com.dotscreen.portal.ui.screens.search.SearchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/search"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.MyContents"
+            android:name="com.dotscreen.portal.ui.screens.mycontents.MyContentsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/mycontent"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.packages.PackagesActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/rightvpackages"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Leanback"
+            android:name="com.dotscreen.portal.ui.screens.ads.ImageAdsActivity"/>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.setup.SettingsInfoHDMIActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/settings/hdmi"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.setup.SettingsInfoSignalActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/settings/signal_info"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.setup.SettingsInfoIPActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/settings/ip_info"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.setup.SettingsInfoSTBActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/settings/stb_info"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.setup.SettingsInfoSoftwareActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/settings/soft_info"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.setup.connectivities.SettingsInfoConnectivityActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="megacable"
+                    android:host="com.dotscreen.megacable.portal"
+                    android:path="/settings/connectivity_info"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name="com.dotscreen.portal.ui.screens.onboarding.ChannelScanActivity">
+            <intent-filter>
+                <action android:name="com.android.setupwizard.action.HOOK_END"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name="com.dotscreen.portal.ui.screens.onboarding.FWUpdateCheckActivity">
+            <intent-filter android:priority="2000">
+                <action android:name="com.android.setupwizard.action.HOOK_BEGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.Details"
+            android:name="com.dotscreen.portal.ui.screens.setup.UpdaterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.dotscreen.megacable.portal.GlobalKeyReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.GLOBAL_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.dotscreen.portal.utils.MegaNotificationPublisher"/>
+        <receiver android:name="com.dotscreen.megacable.portal.ClearedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.dotscreen.portal.utils.MegaNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo"/>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent"/>
+        <provider
+            android:name="com.dotscreen.portal.search.AiringsSearchProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="@string/global_search_epg_authority">
+            <path-permission
+                android:readPermission="android.permission.GLOBAL_SEARCH"
+                android:pathPrefix="/search"/>
+        </provider>
+        <provider
+            android:name="com.dotscreen.portal.search.CatchupSearchProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="@string/global_search_catchup_authority">
+            <path-permission
+                android:readPermission="android.permission.GLOBAL_SEARCH"
+                android:pathPrefix="/search"/>
+        </provider>
+        <provider
+            android:name="com.dotscreen.portal.search.VODSearchProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="@string/global_search_vod_authority">
+            <path-permission
+                android:readPermission="android.permission.GLOBAL_SEARCH"
+                android:pathPrefix="/search"/>
+        </provider>
+        <provider
+            android:name="com.dotscreen.tv.common.providers.ChannelLanguageProvider"
+            android:authorities="com.dotscreen.tv.ChannelLanguageProvider"/>
+        <provider
+            android:name="com.dotscreen.tv.common.providers.ScanStatusProvider"
+            android:authorities="com.dotscreen.tv.ScanStatusProvider"/>
+        <receiver
+            android:name="com.dotscreen.portal.utils.PADITokenReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.netflix.ninja.intent.action.PADI_TOKEN_REQUEST"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:label="@string/tvinput_name"
+            android:name="com.dotscreen.tvinput.OTTLiveTvInputService"
+            android:permission="android.permission.BIND_TV_INPUT">
+            <intent-filter>
+                <action android:name="android.media.tv.TvInputService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.media.tv.input"
+                android:resource="@xml/tv_input_service"/>
+        </service>
+        <service
+            android:label="@string/tvinput_name"
+            android:name="com.dotscreen.tvinput.InteractiveLiveTvInputService"
+            android:permission="android.permission.BIND_TV_INPUT">
+            <intent-filter>
+                <action android:name="android.media.tv.TvInputService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.media.tv.input"
+                android:resource="@xml/tv_input_service"/>
+        </service>
+        <receiver android:name="com.dotscreen.tvinput.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider
+            android:name="io.sentry.android.core.SentryInitProvider"
+            android:exported="false"
+            android:authorities="com.dotscreen.megacable.portal.SentryInitProvider"/>
+        <provider
+            android:name="io.sentry.android.core.SentryPerformanceProvider"
+            android:exported="false"
+            android:authorities="com.dotscreen.megacable.portal.SentryPerformanceProvider"
+            android:initOrder="200"/>
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.dotscreen.megacable.portal.firebaseinitprovider"
+            android:initOrder="100"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.dotscreen.megacable.portal.lifecycle-process"/>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct"/>
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+    </application>
+</manifest>

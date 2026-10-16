@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/right_popup_width"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/synopsis_selector"
+        android:background="@drawable/casting_dialog_selector"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:id="@+id/casting_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:paddingStart="30dp"
+        android:paddingEnd="40dp"/>
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="@drawable/item_selector">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="13sp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:id="@+id/text"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:includeFontPadding="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:fontFamily="@font/lato_bold"
+            app:farDesignColor="standard.item.default.textColor"/>
+        <TextView
+            android:textSize="10sp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:id="@+id/subtext"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:text="More"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:includeFontPadding="false"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:alpha="0.6"
+            android:fontFamily="@font/lato_bold"
+            app:farDesignColor="standard.item.default.textColor"/>
+    </LinearLayout>
+</FrameLayout>
